@@ -53,3 +53,4 @@ var App;
     App.SideMenuController = SideMenuController;
     angular.module("app").controller("SideMenuController", SideMenuController);
 })(App || (App = {}));
+//# sourceMappingURL=SideMenuController.js.map

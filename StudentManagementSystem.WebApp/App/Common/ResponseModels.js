@@ -41,3 +41,4 @@ var App;
     })(BaseResponse);
     App.SearchResponse = SearchResponse;
 })(App || (App = {}));
+//# sourceMappingURL=ResponseModels.js.map

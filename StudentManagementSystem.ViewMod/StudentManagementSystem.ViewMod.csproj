@@ -40,7 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseViewModel.cs" />
+    <Compile Include="FeeViewModel.cs" />
+    <Compile Include="PaymentViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StudentViewModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StudentManagementSystem.Model\StudentManagementSystem.Model.csproj">
+      <Project>{62E7B151-5847-41E7-B300-0D8316227D64}</Project>
+      <Name>StudentManagementSystem.Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

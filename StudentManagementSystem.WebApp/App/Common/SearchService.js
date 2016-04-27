@@ -47,3 +47,4 @@ var App;
     App.SearchService = SearchService;
     angular.module("app").service("SearchService", SearchService);
 })(App || (App = {}));
+//# sourceMappingURL=SearchService.js.map

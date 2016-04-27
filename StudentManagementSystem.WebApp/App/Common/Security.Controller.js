@@ -127,3 +127,4 @@ var App;
     App.RegisterController = RegisterController;
     angular.module("app").controller("RegisterController", RegisterController);
 })(App || (App = {}));
+//# sourceMappingURL=Security.Controller.js.map

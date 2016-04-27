@@ -87,3 +87,4 @@ var App;
     App.WebService = WebService;
     angular.module("app").service("WebService", WebService);
 })(App || (App = {}));
+//# sourceMappingURL=WebService.js.map

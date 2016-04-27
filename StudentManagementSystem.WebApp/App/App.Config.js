@@ -143,3 +143,4 @@ var App;
     angular.module("app", ["ngResource", "ngAnimate", "ui.router", "ui.bootstrap", "LocalStorageModule"]);
     angular.module("app").config(AppConfig);
 })(App || (App = {}));
+//# sourceMappingURL=App.Config.js.map

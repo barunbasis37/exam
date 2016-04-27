@@ -11,3 +11,4 @@ var App;
     })();
     App.BaseService = BaseService;
 })(App || (App = {}));
+//# sourceMappingURL=BaseService.js.map

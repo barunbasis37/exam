@@ -63,3 +63,4 @@ var App;
     })(DataRequest);
     App.DetailRequest = DetailRequest;
 })(App || (App = {}));
+//# sourceMappingURL=RequestModels.js.map

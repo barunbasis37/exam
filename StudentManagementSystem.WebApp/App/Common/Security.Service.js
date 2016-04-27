@@ -102,3 +102,4 @@ var App;
     App.PermissionService = PermissionService;
     angular.module("app").service("permissionService", PermissionService);
 })(App || (App = {}));
+//# sourceMappingURL=Security.Service.js.map

@@ -36,3 +36,4 @@ var App;
     })();
     App.RegisterResponse = RegisterResponse;
 })(App || (App = {}));
+//# sourceMappingURL=SecurityLibrary.js.map

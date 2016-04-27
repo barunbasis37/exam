@@ -8,19 +8,13 @@ using System.Threading.Tasks;
 
 namespace StudentManagementSystem.Model
 {
-    public class Course : Entity
+    public class Fee : Entity
     {
         [Required]
-        [Index("IX_CourseName")]
-        [StringLength(150)]
+        [Index("IX_FeeName")]
+        [StringLength(100)]
         public string Name { get; set; }
         [Required]
-        [StringLength(50)]
-        public string Code { get; set; }
-        [Required]
-        [StringLength(50)]
-        public string Category { get; set; }
-        [Required]
-        public double Credit { get; set; }
+        public double Amount { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Net.Http;
 using System.Security.Claims;
 using System.Security.Cryptography;
@@ -327,8 +328,20 @@ namespace StudentManagementSystem.WebApp.Controllers
             {
                 return BadRequest(ModelState);
             }
-
-            var user = new ApplicationUser() { UserName = model.Email, Email = model.Email };
+            var isPhoneDup = await UserManager.Users.AnyAsync(x => x.PhoneNumber == model.Phone);
+            if (isPhoneDup)
+            {
+                ModelState.AddModelError("model.Phone", "Duplicate Phone number");
+                return BadRequest(ModelState);
+            }
+            var user = new ApplicationUser()
+            {
+                UserName = model.Email,
+                Email = model.Email,
+                FirstName = model.FirstName,
+                LastName = model.LastName,
+                PhoneNumber = model.Phone
+            };
 
             IdentityResult result = await UserManager.CreateAsync(user, model.Password);
 
@@ -372,7 +385,18 @@ namespace StudentManagementSystem.WebApp.Controllers
             }
             return Ok();
         }
-
+        [Route("GetUserInfo")]
+        public UserViewModel GetByUser()
+        {
+            ApplicationUser user = UserManager.FindById(User.Identity.GetUserId());
+            return new UserViewModel
+            {
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                Phone = user.PhoneNumber,
+                Email = User.Identity.GetUserName()
+            };
+        }
         protected override void Dispose(bool disposing)
         {
             if (disposing && _userManager != null)
