@@ -39,99 +39,42 @@ var App;
                 url: "/denied",
                 template: '<h1>Access Denied <a ui-sref="root.home"> back to home </a></h1>'
             })
-                .state("root.products", {
-                url: "/products",
-                templateUrl: "partials/inventory/products.tpl.html",
-                controller: "ProductsController",
+                .state("root.fees", {
+                url: "/fees",
+                templateUrl: "partials/fees/fees.tpl.html",
+                controller: "FeesController",
                 controllerAs: "vm"
             })
-                .state("root.stockoutreport", {
-                url: "/stockout-report",
-                templateUrl: "partials/inventory/stockout-report.tpl.html",
-                controller: "StockoutReportController",
+                .state("root.student", {
+                url: "/student",
+                templateUrl: "partials/student/student.tpl.html",
+                controller: "StudentController",
                 controllerAs: "vm"
             })
-                .state("root.suppliers", {
-                url: "/suppliers",
-                templateUrl: "partials/supplier/suppliers.tpl.html",
-                controller: "SuppliersController",
-                controllerAs: "vm"
-            })
-                .state("root.supplierhistory", {
-                url: "/supplier-history",
+                .state("root.studenthistory", {
+                url: "/student-history",
                 params: { supplier: null },
-                templateUrl: "partials/supplier/supplier-history.tpl.html",
-                controller: "SupplierHistoryController",
+                templateUrl: "partials/student/student-history.tpl.html",
+                controller: "StudentHistoryController",
                 controllerAs: "vm"
             })
-                .state("root.purchases", {
-                url: "/purchases",
-                templateUrl: "partials/purchase/purchases.tpl.html",
-                controller: "PurchasesController",
+                .state("root.collection", {
+                url: "/collection",
+                templateUrl: "partials/collection/collections.tpl.html",
+                controller: "CollectionController",
                 controllerAs: "vm"
             })
-                .state("root.purchasedetails", {
-                url: "/purchase-details",
+                .state("root.collectiondetails", {
+                url: "/collection-details",
                 params: { purchase: null },
-                templateUrl: "partials/purchase/purchase-details.tpl.html",
-                controller: "PurchaseDetailsController",
+                templateUrl: "partials/collection/collection-details.tpl.html",
+                controller: "CollectionDetailsController",
                 controllerAs: "vm"
             })
                 .state("root.payments", {
                 url: "/payments",
                 templateUrl: "partials/payment/payments.tpl.html",
                 controller: "PaymentsController",
-                controllerAs: "vm"
-            })
-                .state("root.sales", {
-                url: "/sales",
-                templateUrl: "partials/sale/sales.tpl.html",
-                controller: "SalesController",
-                controllerAs: "vm"
-            })
-                .state("root.saledetails", {
-                url: "/sale-details",
-                params: { sale: null },
-                templateUrl: "partials/sale/sale-details.tpl.html",
-                controller: "SaleDetailsController",
-                controllerAs: "vm"
-            })
-                .state("root.salesreport", {
-                url: "/sales-report",
-                templateUrl: "partials/sale/sales-report.tpl.html",
-                controller: "SalesReportController",
-                controllerAs: "vm"
-            })
-                .state("root.bookmarks", {
-                url: "/bookmarks",
-                templateUrl: "partials/inventory/bookmarks.tpl.html",
-                controller: "BookmarkController",
-                controllerAs: "vm"
-            })
-                .state("root.productbookmark", {
-                url: "/product-bookmark",
-                params: { bookmark: null },
-                templateUrl: "partials/inventory/product-bookmark.tpl.html",
-                controller: "ProductBookmarkController",
-                controllerAs: "vm"
-            })
-                .state("root.stockreport", {
-                url: "/stock-report",
-                templateUrl: "partials/inventory/stock-report.tpl.html",
-                controller: "StockReportController",
-                controllerAs: "vm"
-            })
-                .state("root.customers", {
-                url: "/customers",
-                templateUrl: "partials/customer/customers.tpl.html",
-                controller: "CustomersController",
-                controllerAs: "vm"
-            })
-                .state("root.customerhistory", {
-                url: "/customer-history",
-                params: { customer: null },
-                templateUrl: "partials/customer/customer-history.tpl.html",
-                controller: "CustomerHistoryController",
                 controllerAs: "vm"
             });
             $urlRouterProvider.otherwise("/");

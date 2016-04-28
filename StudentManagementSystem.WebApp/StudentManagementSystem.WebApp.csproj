@@ -209,8 +209,22 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseCommandController.cs" />
+    <Compile Include="Controllers\BaseQueryController.cs" />
+    <Compile Include="Controllers\CommandController\PaymentController.cs" />
+    <Compile Include="Controllers\CommandController\FeeController.cs" />
+    <Compile Include="Controllers\CommandController\CollectionController.cs" />
+    <Compile Include="Controllers\CommandController\CollectionDetailController.cs" />
+    <Compile Include="Controllers\CommandController\StudentController.cs" />
+    <Compile Include="Controllers\DropdownController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PermissionController.cs" />
+    <Compile Include="Controllers\QueryController\PaymentQueryController.cs" />
+    <Compile Include="Controllers\QueryController\FeeQueryController.cs" />
+    <Compile Include="Controllers\QueryController\CollectionDetailQueryController.cs" />
+    <Compile Include="Controllers\QueryController\CollectionQueryController.cs" />
+    <Compile Include="Controllers\QueryController\StudentHistoryQueryController.cs" />
+    <Compile Include="Controllers\QueryController\StudentQueryController.cs" />
     <Compile Include="Controllers\SideMenuController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -253,9 +267,17 @@
     <Content Include="partials\account\profile.tpl.html" />
     <Content Include="partials\account\register.tpl.html" />
     <Content Include="partials\account\signin.tpl.html" />
+    <Content Include="partials\Admin\duelist.tpl.html" />
+    <Content Include="partials\Admin\feestructure.tpl.html" />
+    <Content Include="partials\collection\collection-details.tpl.html" />
+    <Content Include="partials\collection\collections.tpl.html" />
     <Content Include="partials\home\home.tpl.html" />
     <Content Include="partials\home\side-menu.tpl.html" />
     <Content Include="partials\nav.html" />
+    <Content Include="partials\payment\payments.tpl.html" />
+    <Content Include="partials\student\payment.tpl.html" />
+    <Content Include="partials\student\student-history.tpl.html" />
+    <Content Include="partials\student\student.tpl.html" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-local-storage.js" />
@@ -334,12 +356,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App\Admin\" />
-    <Folder Include="App\Model\" />
-    <Folder Include="App\Student\" />
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\CommandController\" />
-    <Folder Include="Controllers\QueryController\" />
-    <Folder Include="partials\student\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -347,6 +364,9 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="App\App.Config.ts" />
+    <TypeScriptCompile Include="App\Collection\Model.ts" />
+    <TypeScriptCompile Include="App\Collection\CollectionController.ts" />
+    <TypeScriptCompile Include="App\Collection\CollectionDetailsController.ts" />
     <TypeScriptCompile Include="App\Common\BaseService.ts" />
     <TypeScriptCompile Include="App\Common\DropdownService.ts" />
     <TypeScriptCompile Include="App\Common\RequestModels.ts" />
@@ -358,8 +378,14 @@
     <TypeScriptCompile Include="App\Common\SecurityLibrary.ts" />
     <TypeScriptCompile Include="App\Common\UrlService.ts" />
     <TypeScriptCompile Include="App\Common\WebService.ts" />
+    <TypeScriptCompile Include="App\Fee\Models.ts" />
     <TypeScriptCompile Include="App\Home\HomeController.ts" />
     <TypeScriptCompile Include="App\Menu\SideMenuController.ts" />
+    <TypeScriptCompile Include="App\Payment\Model.ts" />
+    <TypeScriptCompile Include="App\Payment\PaymentController.ts" />
+    <TypeScriptCompile Include="App\Student\Model.ts" />
+    <TypeScriptCompile Include="App\Student\StudentController.ts" />
+    <TypeScriptCompile Include="App\Student\StudentHistoryController.ts" />
     <TypeScriptCompile Include="Scripts\typings\angular-local-storage\angular-local-storage.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angular-ui-bootstrap\angular-ui-bootstrap.d.ts" />
     <TypeScriptCompile Include="Scripts\typings\angular-ui-router\angular-ui-router.d.ts" />
@@ -384,6 +410,28 @@
     <EmbeddedResource Include="Migrations\201604260732160_Identity Modify2.resx">
       <DependentUpon>201604260732160_Identity Modify2.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StudentManagementSystem.Model\StudentManagementSystem.Model.csproj">
+      <Project>{62e7b151-5847-41e7-b300-0d8316227d64}</Project>
+      <Name>StudentManagementSystem.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StudentManagementSystem.Repo\StudentManagementSystem.Repo.csproj">
+      <Project>{82371e0f-9a4b-44b2-baca-35f7edffa3d9}</Project>
+      <Name>StudentManagementSystem.Repo</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StudentManagementSystem.Request\StudentManagementSystem.Request.csproj">
+      <Project>{c95681de-5787-44db-8106-0888615933d8}</Project>
+      <Name>StudentManagementSystem.Request</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StudentManagementSystem.Service\StudentManagementSystem.Service.csproj">
+      <Project>{ce77f4f6-b80a-40be-8946-23775bfe9aca}</Project>
+      <Name>StudentManagementSystem.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\StudentManagementSystem.ViewMod\StudentManagementSystem.ViewMod.csproj">
+      <Project>{0489ac71-f90a-472e-a747-a1063c7f62d0}</Project>
+      <Name>StudentManagementSystem.ViewMod</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -58,8 +58,18 @@
     <Compile Include="Migrations\201604270743325_Initial Database Create.Designer.cs">
       <DependentUpon>201604270743325_Initial Database Create.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201604270901145_Payment Edit.cs" />
+    <Compile Include="Migrations\201604270901145_Payment Edit.Designer.cs">
+      <DependentUpon>201604270901145_Payment Edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201604271000106_Collection Add.cs" />
+    <Compile Include="Migrations\201604271000106_Collection Add.Designer.cs">
+      <DependentUpon>201604271000106_Collection Add.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Payment.cs" />
+    <Compile Include="Collection.cs" />
+    <Compile Include="CollectionDetail.cs" />
     <Compile Include="Student.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -70,6 +80,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201604270743325_Initial Database Create.resx">
       <DependentUpon>201604270743325_Initial Database Create.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604270901145_Payment Edit.resx">
+      <DependentUpon>201604270901145_Payment Edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201604271000106_Collection Add.resx">
+      <DependentUpon>201604271000106_Collection Add.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
