@@ -9,19 +9,12 @@ namespace StudentManagementSystem.WebApp.Permission
     public enum UserRoutes
     {
         home,
-        products,
-        suppliers,
-        supplierhistory,
-        purchases,
-        purchasedetails,
+        fees,
+        student,
+        studenthistory,
+        collection,
+        collectiondetails,
         payments,
-        sales,
-        saledetails,
-        salesreport,
-        stockoutreport,
-        profile,
-        customers,
-        customerhistory
     }
 
     public enum PublicRoutes

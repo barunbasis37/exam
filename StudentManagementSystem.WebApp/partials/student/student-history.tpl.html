@@ -7,12 +7,12 @@
             </div>
             <div class="panel-body">
                 <h3 class="panel-title">Supplier Detail</h3>
-                <h3>Name: {{vm.Supplier.Name}}</h3>
-                <h4>Phone: {{vm.Supplier.Phone}}</h4>
-                <h4>Company: {{vm.Supplier.Company}}</h4>
+                <h3>Name: {{vm.Student.Name}}</h3>
+                <h4>Phone: {{vm.Student.Phone}}</h4>
+                <h4>Company: {{vm.Student.Department.Name}}</h4>
             </div>
             <div class="panel-footer">
-                <h4>Due: {{vm.Model.PurchaseTotal - vm.Model.PaymentTotal}}</h4>
+                <h4>Due: {{vm.Model.CollectionTotal - vm.Model.PaymentTotal}}</h4>
             </div>
         </div>
     </div>

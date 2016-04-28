@@ -77,7 +77,7 @@
                 <thead>
                     <tr>
                         <th>#</th>
-                        <th>Supplier</th>
+                        <th>Student</th>
                         <th>Amount</th>
                         <th>Memo</th>
                         <th>PayBy</th>
@@ -88,7 +88,7 @@
                 <tbody>
                     <tr ng-repeat="p in vm.Models track by $index">
                         <td>{{$index + 1}}</td>
-                        <td>{{p.Supplier.Name}}</td>
+                        <td>{{p.Student.Name}}</td>
                         <td>{{p.Amount}}</td>
                         <td>{{p.Memo}}</td>
                         <td>{{p.PayBy}}</td>

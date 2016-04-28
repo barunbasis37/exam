@@ -271,11 +271,11 @@
     <Content Include="partials\Admin\feestructure.tpl.html" />
     <Content Include="partials\collection\collection-details.tpl.html" />
     <Content Include="partials\collection\collections.tpl.html" />
+    <Content Include="partials\fee\fees.tpl.html" />
     <Content Include="partials\home\home.tpl.html" />
     <Content Include="partials\home\side-menu.tpl.html" />
     <Content Include="partials\nav.html" />
     <Content Include="partials\payment\payments.tpl.html" />
-    <Content Include="partials\student\payment.tpl.html" />
     <Content Include="partials\student\student-history.tpl.html" />
     <Content Include="partials\student\student.tpl.html" />
     <Content Include="Scripts\angular-animate.js" />
